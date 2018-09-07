@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     protected  TextView _text_result;
-    static int value=0;
+    static long value=0;
     double x [] = new double [500];
     char op[] = new char [500];
     int top_x=-1;
@@ -79,146 +79,255 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 top_x++;
-                x[top_x]=9;
-                value=9;
+
+                if(value!=0)
+                {
+                    String _newValue=Long.toString(value);
+                    _newValue=_newValue+"9";
+                    value=Long.parseLong(_newValue);
+                    x[top_x]=(double)value;
+
+                }
+                else {
+                    value=9;
+                    x[top_x] = 9;
+                }
                 _text_result.setText(Double.toString(x[top_x]));
                 _text_id.setText(Double.toString(x[top_x]));
-                if(top_x>top_op && top_op!=-1)
+                /*if(top_x>top_op && top_op!=-1)
                 {
                     _text_result.setText(Double.toString( calc() ) );
-                }
+                }*/
             }
         });
         _btn_8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                top_x++;
                 if(value!=0)
                 {
-                    String _newValue=Integer.toString(value);
+                    String _newValue=Long.toString(value);
                     _newValue=_newValue+"8";
-                    value=Integer.parseInt(_newValue);
+                    value=Long.parseLong(_newValue);
                     x[top_x]=(double)value;
 
                 }
-                else
-                    x[top_x]=8;
+                else {
+                    top_x++;
+                    x[top_x] = 8;
+                    value = 8;
+                }
                 _text_result.setText(Double.toString(x[top_x]));
                 _text_id.setText(Double.toString(x[top_x]));
-                if(top_x>top_op && top_op!=-1)
+                /*if(top_x>top_op && top_op!=-1)
                 {
                     _text_result.setText(Double.toString( calc() ) );
-                }
+                }*/
             }
         });
         _btn_7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                top_x++;
-                x[top_x]=7;
+                if(value!=0)
+                {
+                    String _newValue=Long.toString(value);
+                    _newValue=_newValue+"7";
+                    value=Long.parseLong(_newValue);
+                    x[top_x]=(double)value;
+
+                }
+                else{
+                    top_x++;
+                    x[top_x]=7;
+                value=7;
+                }
                 _text_result.setText(Double.toString(x[top_x]));
                 _text_id.setText(Double.toString(x[top_x]));
-                if(top_x>top_op && top_op!=-1)
+                /*if(top_x>top_op && top_op!=-1)
                 {
                     _text_result.setText(Double.toString( calc() ) );
-                }
+                }*/
             }
         });
         _btn_6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                top_x++;
-                x[top_x]=6;
+                //top_x++;
+                if(value!=0)
+                {
+                    String _newValue=Long.toString(value);
+                    _newValue=_newValue+"6";
+                    value=Long.parseLong(_newValue);
+                    x[top_x]=(double)value;
+
+                }
+                else {
+                    top_x++;
+                    x[top_x] = 6;
+                    value = 6;
+                }
                 _text_result.setText(Double.toString(x[top_x]));
                 _text_id.setText(Double.toString(x[top_x]));
-                if(top_x>top_op && top_op!=-1)
+                /*if(top_x>top_op && top_op!=-1)
                 {
                     _text_result.setText(Double.toString( calc() ) );
-                }
+                }*/
             }
         });
 
         _btn_5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                top_x++;
-                x[top_x]=5;
+                //top_x++;
+                if(value!=0)
+                {
+                    String _newValue=Long.toString(value);
+                    _newValue=_newValue+"5";
+                    value=Long.parseLong(_newValue);
+                    x[top_x]=(double)value;
+
+                }
+                else {
+                    top_x++;
+                    x[top_x] = 5;
+                    value = 5;
+                }
                 _text_result.setText(Double.toString(x[top_x]));
                 _text_id.setText(Double.toString(x[top_x]));
-                if(top_x>top_op && top_op!=-1)
+                /*if(top_x>top_op && top_op!=-1)
                 {
                     _text_result.setText(Double.toString( calc() ) );
-                }
+                }*/
             }
         });
         _btn_4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                top_x++;
-                x[top_x]=4;
+                //top_x++;
+                if(value!=0)
+                {
+                    String _newValue=Long.toString(value);
+                    _newValue=_newValue+"4";
+                    value=Long.parseLong(_newValue);
+                    x[top_x]=(double)value;
+
+                }
+                else {
+                    top_x++;
+                    x[top_x] = 4;
+                    value = 4;
+                }
                 _text_result.setText(Double.toString(x[top_x]));
                 _text_id.setText(Double.toString(x[top_x]));
-                if(top_x>top_op && top_op!=-1)
+                /*if(top_x>top_op && top_op!=-1)
                 {
                     _text_result.setText(Double.toString( calc() ) );
-                }
+                }*/
             }
         });
         _btn_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                top_x++;
-                x[top_x]=3;
+                //top_x++;
+                if(value!=0)
+                {
+                    String _newValue=Long.toString(value);
+                    _newValue=_newValue+"3";
+                    value=Long.parseLong(_newValue);
+                    x[top_x]=(double)value;
+
+                }
+                else {
+                    top_x++;
+                    x[top_x] = 3;
+                    value = 3;
+                }
                 _text_result.setText(Double.toString(x[top_x]));
                 _text_id.setText(Double.toString(x[top_x]));
-                if(top_x>top_op && top_op!=-1)
+                /*if(top_x>top_op && top_op!=-1)
                 {
                     _text_result.setText(Double.toString( calc() ) );
-                }
+                }*/
             }
         });
         _btn_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                top_x++;
-                x[top_x]=2;
+                //top_x++;
+                if(value!=0)
+                {
+                    String _newValue=Long.toString(value);
+                    _newValue=_newValue+"2";
+                    value=Long.parseLong(_newValue);
+                    x[top_x]=(double)value;
+
+                }
+                else {
+                    top_x++;
+                    x[top_x] = 2;
+                    value = 2;
+                }
                 _text_result.setText(Double.toString(x[top_x]));
                 _text_id.setText(Double.toString(x[top_x]));
-                if(top_x>top_op && top_op!=-1)
+                /*if(top_x>top_op && top_op!=-1)
                 {
                     _text_result.setText(Double.toString( calc() ) );
-                }
+                }*/
             }
         });
         _btn_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                top_x++;
-                x[top_x]=1;
+                //top_x++;
+                if(value!=0)
+                {
+                    String _newValue=Long.toString(value);
+                    _newValue=_newValue+"1";
+                    value=Long.parseLong(_newValue);
+                    x[top_x]=(double)value;
+
+                }
+                else {
+                    top_x++;
+                    x[top_x] = 1;
+                    value = 1;
+                }
                 _text_result.setText(Double.toString(x[top_x]));
                 _text_id.setText(Double.toString(x[top_x]));
-                if(top_x>top_op && top_op!=-1)
+                /*if(top_x>top_op && top_op!=-1)
                 {
                     _text_result.setText(Double.toString( calc() ) );
-                }
+                }*/
             }
         });
         _btn_0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                top_x++;
-                x[top_x]=0;
+                //top_x++;
+                if(value!=0)
+                {
+                    String _newValue=Long.toString(value);
+                    _newValue=_newValue+"0";
+                    value=Long.parseLong(_newValue);
+                    x[top_x]=(double)value;
+
+                }
+                else {
+                    top_x++;
+                    x[top_x] = 0;
+                    value = 0;
+                }
                 _text_result.setText(Double.toString(x[top_x]));
                 _text_id.setText(Double.toString(x[top_x]));
-                if(top_x>top_op && top_op!=-1)
+                /*if(top_x>top_op && top_op!=-1)
                 {
                     _text_result.setText(Double.toString( calc() ) );
-                }
+                }*/
             }
         });
         _btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                value=0;
                 top_op++;
                 op[top_op]='+';
                 _text_result.setText(Character.toString(op[top_op]));
@@ -238,6 +347,7 @@ public class MainActivity extends AppCompatActivity {
         _btn_sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                value=0;
                 top_op++;
                 op[top_op]='-';
                 _text_result.setText(Character.toString(op[top_op]));
@@ -247,6 +357,7 @@ public class MainActivity extends AppCompatActivity {
         _btn_div.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                value=0;
                 top_op++;
                 op[top_op]='/';
                 _text_result.setText(Character.toString(op[top_op]));
@@ -258,6 +369,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 top_op=-1;
                 top_x=-1;
+                value=0;
                 _text_result.setText(Integer.toString(0));
                 _text_id.setText(Integer.toString(0));
             }
@@ -278,7 +390,11 @@ public class MainActivity extends AppCompatActivity {
                 //res=a+b;
                 //_text_result.setText(Integer.toString(res));
                 //int res=0;*/
-                double res=0;
+                if(top_x<=0 || top_op<0)
+                    _text_result.setText("ERR");
+                else
+                    _text_result.setText(Double.toString( calc() ) );
+                /*double res=0;
                 double a=0;
                 double b=0;
                 char c='\0';
@@ -321,7 +437,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 _text_result.setText(Double.toString(res));
                 top_x++;
-                x[top_x]=res;
+                x[top_x]=res;*/
             }
         });
 
