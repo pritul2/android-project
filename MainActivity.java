@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
         switch(oper) {
             case '+':
                 top_x++;
-                x[top_x] = (op1 + op2);
+                x[top_x] =
+                        (op1 + op2);
                 return (x[top_x]);
 
             case '-':
@@ -390,6 +391,7 @@ public class MainActivity extends AppCompatActivity {
                 //res=a+b;
                 //_text_result.setText(Integer.toString(res));
                 //int res=0;*/
+                value=0;
                 if(top_x<=0 || top_op<0)
                     _text_result.setText("ERR");
                 else
